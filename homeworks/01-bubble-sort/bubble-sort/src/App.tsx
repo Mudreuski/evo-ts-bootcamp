@@ -38,7 +38,10 @@ export default class App extends React.Component {
     private setArrayWithData(): void {
         this.clearSortInterval();
 
-        this.setState({arrayData: this.createArrayWithData()});
+        this.setState({
+            arrayData: this.createArrayWithData(),
+            isSorted: false,
+        });
     }
 
     private createArrayWithData(): Array<number> {
